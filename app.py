@@ -20,7 +20,7 @@ app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] =os.environ.get('DATABASE_URL?sslmode=require').replace('postgres://', 'postgresql://')
+app.config['SQLALCHEMY_DATABASE_URI'] =os.environ.get('DATABASE_URL', '').replace('postgres://', 'postgresql://')
 
 # Remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
