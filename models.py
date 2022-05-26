@@ -1,4 +1,4 @@
-from app import db
+import db
 
 
 class Pet(db.Model):
