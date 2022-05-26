@@ -1,5 +1,6 @@
 # import necessary libraries
 import os
+import re
 from flask import (
     Flask,
     render_template,
@@ -17,6 +18,7 @@ app = Flask(__name__)
 #################################################
 
 from flask_sqlalchemy import SQLAlchemy
+
 
 app.config['SQLALCHEMY_DATABASE_URI'] =os.environ.get('DATABASE_URL?sslmode=require').replace('postgres://', 'postgresql://')
 
